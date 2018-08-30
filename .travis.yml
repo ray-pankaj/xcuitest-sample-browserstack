@@ -1,7 +1,5 @@
-language: objective_c
-osx_image: xcode8
-env:
-  - XCODEBUILD_PLATFORM='iOS Simulator' XCODEBUILD_SIM_OS=10.3.1 XCODEBUILD_DEVICE='iPhone 6' XCODEBUILD_ACTION=build
+language: objective-c
+xcode_scheme: "Sample iOS"
 xcode_project: "Sample iOS.xcodeproj"
 install:
   - xcodebuild -project "Sample iOS.xcodeproj" -scheme "Sample iOS" -sdk "iphonesimulator10.3" clean analyze
