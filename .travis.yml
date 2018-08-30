@@ -1,0 +1,6 @@
+language: objective_c
+xcode_project: "Sample iOS.xcodeproj"
+install:
+  - xcodebuild -project "Sample iOS.xcodeproj" -scheme "Sample iOS" -sdk "iphonesimulator10.3" clean analyze
+  - xcodebuild -project "Sample iOS.xcodeproj" -scheme "Sample iOS" -archivePath "$PWD/SampleiOS.xcarchive" archive
+  - xcodebuild -exportArchive -archivePath "$PWD/SampleiOS.xcarchive" -exportPath -exportOptionsPlist "$PWD/Sample iOS/Info.plist"
